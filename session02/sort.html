@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        sort: sắp xếp
+        */
+       let numbers = [5,11,1,3,6,7]
+       let result = numbers.sort();
+        console.log(result);
+        let increase = numbers.sort((a,b)=>{
+            return a - b;
+        })
+        console.log(increase);
+        let std = [
+            {
+                name:"hoa",
+                id:1,
+            },
+            {
+                name:"nam",
+                id:3,
+            },
+            {
+                name:"binh",
+                id:2,
+            },
+            {
+                name:"tien",
+                id:4,
+            },
+        ]
+        let names=std.sort((a,b)=>{
+           if( a.name > b.name ){
+            return 11;
+           }if(a.name<b.name){
+            return -15
+           }else{
+            return 0
+           }
+        });
+        console.log(names)
+    </script>
+</body>
+</html>

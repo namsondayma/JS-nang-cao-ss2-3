@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function sortEmployees(employees, sortOrder) {
+  if (sortOrder === "Increase") {
+    employees.sort(function(a, b) {
+      return a.age - b.age;
+    });
+  } else if (sortOrder === "Decrease") {
+    employees.sort(function(a, b) {
+      return b.age - a.age;
+    });
+  }
+  
+  return employees;
+}
+const employees = [
+  {
+    name: "nam son",
+    age: 21,
+  },
+  {
+    name: "dien tien",
+    age: 30,
+  },
+  {
+    name: "the minh",
+    age: 19,
+  }
+];
+
+console.log(sortEmployees(employees, "Increase"));
+console.log(sortEmployees(employees, "Decrease"));
+    </script>
+</body>
+</html>

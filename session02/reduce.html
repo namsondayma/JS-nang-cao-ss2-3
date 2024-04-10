@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let number=[1,2,3,4,5,6];
+        let sum=0
+        for(let i=0;i<number.length;i++){
+        sum = sum + number[i];
+        }
+        console.log(sum);
+        let total = number.reduce((accumulator, currentValue, arr)=>{
+        return accumulator+currentValue
+    },0)
+    console.log(total);
+    let cart=[
+        {
+            name:"iphone15",
+            quantity:5,
+            price:5000,
+        },
+        {
+            name:"iphone13",
+            quantity:7,
+            price:3000,
+        },
+        {
+            name:"iphone14",
+            quantity:6,
+            price:4000,
+        },
+    ]
+    let pay = cart.reduce((accumulator,currentValue,arr)=>{
+        return accumulator + currentValue.price*currentValue.quantity
+    },0)
+    console.log(pay)
+    </script>
+</body>
+</html>
